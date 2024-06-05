@@ -7,6 +7,7 @@ class ChatScreen extends StatefulWidget {
   @override
   State<ChatScreen> createState() => _ChatScreenState();
 }
+
 class _ChatScreenState extends State<ChatScreen> {
   bool shadowColor = false;
   double? scrolledUnderElevation;
@@ -30,6 +31,11 @@ class _ChatScreenState extends State<ChatScreen> {
           servicescreen: Color(0xff1A284E),
           profilescreen: Color(0xff1A284E),
           notifscreen: Color(0xff1A284E),
+          sizehome: 32,
+          sizechat: 35,
+          sizeservice: 30,
+          sizeprofile: 30,
+          sizenotif: 30,
         ),
         body: Directionality(
           textDirection: TextDirection.ltr,
@@ -43,7 +49,7 @@ class _ChatScreenState extends State<ChatScreen> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(60.0),
                       ),
-                      padding: EdgeInsets.all(12.0),
+                      padding: const EdgeInsets.all(12.0),
                       height: 77,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(40.0),
@@ -78,7 +84,7 @@ class _ChatScreenState extends State<ChatScreen> {
                       ],
                     ),
                     const SizedBox(width: 100),
-                    Icon(
+                    const Icon(
                       Icons.phone,
                       color: Color.fromARGB(255, 255, 255, 255),
                       size: 30.0,
@@ -112,10 +118,10 @@ class _ChatScreenState extends State<ChatScreen> {
                           ),
                           width: 300,
                           child: Padding(
-                            padding: EdgeInsets.all(18.0),
+                            padding: const EdgeInsets.all(18.0),
                             child: Text(
                               msg,
-                              style: TextStyle(color: Colors.white, fontSize: 20),
+                              style: const TextStyle(color: Colors.white, fontSize: 20),
                             ),
                           ),
                         );
@@ -158,7 +164,7 @@ class _ChatScreenState extends State<ChatScreen> {
                                 Expanded(
                                   child: TextField(
                                     controller: _controller,
-                                    decoration: InputDecoration(
+                                    decoration: const InputDecoration(
                                       border: InputBorder.none,
                                     ),
                                   ),
@@ -173,12 +179,12 @@ class _ChatScreenState extends State<ChatScreen> {
                         padding: const EdgeInsets.only(left: 10.0, right: 0),
                         decoration: const BoxDecoration(shape: BoxShape.circle),
                         child: InkWell(
+                          onTap: _sendMessage,
                           child: const Icon(
                             Icons.send,
                             color: Color.fromARGB(255, 7, 2, 98),
                             size: 35.0,
                           ),
-                          onTap: _sendMessage,
                         ),
                       )
                     ],
