@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, sort_child_properties_last
 
 import 'package:flutter/material.dart';
-import 'package:sakanify/presentations/screens/chat_screen.dart';
 import 'package:sakanify/presentations/screens/chat_screen2.dart';
 import 'package:sakanify/widgets/navigation_bar2.dart';
 
@@ -21,6 +20,9 @@ class _All_chatsState extends State<All_chats> {
         homescreen: Color(0xffDDB20C),
         chatscreen: Color(0xff1A284E),
         profilescreen: Color(0xff1A284E),
+        sizehome: 40,
+        sizechat: 30,
+        sizeprofile: 30,
       ),  
           backgroundColor: Colors.white,
           body: SingleChildScrollView(

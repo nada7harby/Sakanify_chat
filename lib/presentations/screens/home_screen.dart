@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:sakanify/presentations/screens/Student_data.dart';
+import 'package:sakanify/presentations/screens/chat_screen.dart';
 import 'package:sakanify/presentations/screens/notification.dart';
 import 'package:sakanify/presentations/screens/services/main_screen.dart';
-import 'package:sakanify/widgets/navigation_bar.dart';
+import 'package:sakanify/widgets/navigation_home.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -10,13 +11,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: const NavigateBar1(
-        homescreen: Color(0xffDDB20C), 
-        chatscreen: Color(0xff1A284E), 
-        servicescreen: Color(0xff1A284E), 
-        profilescreen: Color(0xff1A284E), 
-        notifscreen: Color(0xff1A284E),
-        ),
+      bottomNavigationBar: const NavigateHome(),
       body: SafeArea(
         child: Container(
           padding: const EdgeInsets.fromLTRB(0, 50, 0, 0),
@@ -135,7 +130,7 @@ class HomeScreen extends StatelessWidget {
                                   Image.asset("assets/images/messages.png",width: 100, height: 115,),
                                   ElevatedButton(
                                       onPressed: () {
-                                        
+                                        Navigator.push(context, MaterialPageRoute(builder:(context) => const ChatScreen(),));
                                       },
                                       style: ButtonStyle(
                                         backgroundColor: MaterialStateProperty.all(const Color(0xff071947))

@@ -20,6 +20,11 @@ class MainScreenService extends StatelessWidget {
         servicescreen: Color(0xffDDB20C),
         profilescreen: Color(0xff1A284E),
         notifscreen: Color(0xff1A284E),
+        sizehome: 30,
+        sizechat: 30,
+        sizeservice: 35,
+        sizeprofile: 30,
+        sizenotif: 30,
       ),
       body: SafeArea(
         child: Column(

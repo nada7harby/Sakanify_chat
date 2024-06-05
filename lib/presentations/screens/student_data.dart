@@ -13,6 +13,11 @@ class StudentData extends StatelessWidget {
         servicescreen: Color(0xff1A284E),
         profilescreen: Color(0xffDDB20C),
         notifscreen: Color(0xff1A284E),
+        sizehome: 30,
+        sizechat: 30,
+        sizeservice: 30,
+        sizeprofile: 35,
+        sizenotif: 30,
       ),
       body: SafeArea(
           child: Container(

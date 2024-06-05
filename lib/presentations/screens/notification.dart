@@ -17,6 +17,11 @@ class NotificationScreen extends StatelessWidget {
         servicescreen: Color(0xff1A284E),
         profilescreen: Color(0xff1A284E),
         notifscreen: Color(0xffDDB20C),
+        sizehome: 30,
+        sizechat: 30,
+        sizeservice: 30,
+        sizeprofile: 30,
+        sizenotif: 35,
       ),
       body: SafeArea(
         child: Container(

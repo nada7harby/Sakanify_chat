@@ -12,6 +12,9 @@ class OwnerData extends StatelessWidget {
         homescreen: Color(0xff1A284E),
         chatscreen: Color(0xff1A284E),
         profilescreen: Color(0xffDDB20C),
+        sizehome: 32,
+        sizechat: 30,
+        sizeprofile: 35,
       ),
       body: SafeArea(
           child: Container(

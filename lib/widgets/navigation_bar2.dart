@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:sakanify/presentations/screens/all_chats.dart';
-import 'package:sakanify/presentations/screens/chat_screen.dart';
 import 'package:sakanify/presentations/screens/chat_screen2.dart';
-import 'package:sakanify/presentations/screens/home_screen.dart';
-import 'package:sakanify/presentations/screens/notification.dart';
 import 'package:sakanify/presentations/screens/owner_data.dart';
-import 'package:sakanify/presentations/screens/student_data.dart';
 
 class NavigateBar2 extends StatelessWidget {
   const NavigateBar2({
@@ -14,11 +10,17 @@ class NavigateBar2 extends StatelessWidget {
     required this.homescreen,
     required this.chatscreen,
     required this.profilescreen,
+    required this.sizehome,
+    required this.sizechat,
+    required this.sizeprofile,
   });
 
   final Color homescreen;
   final Color chatscreen;
   final Color profilescreen;
+  final double sizehome;
+  final double sizechat;
+  final double sizeprofile;
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +40,7 @@ class NavigateBar2 extends StatelessWidget {
               icon: Icon(
                 Icons.chat_bubble_outline,
                 color: chatscreen,
-                size: 30,
+                size: sizechat,
               ),
             ),
             const Spacer(),
@@ -52,7 +54,7 @@ class NavigateBar2 extends StatelessWidget {
               icon: Icon(
                 Icons.home_outlined,
                 color: homescreen,
-                size: 32,
+                size: sizehome,
               ),
             ),
             const Spacer(),
@@ -66,7 +68,7 @@ class NavigateBar2 extends StatelessWidget {
               icon: Icon(
                 Icons.perm_identity,
                 color: profilescreen,
-                size: 30,
+                size: sizeprofile,
               ),
             ),
             const Spacer(),

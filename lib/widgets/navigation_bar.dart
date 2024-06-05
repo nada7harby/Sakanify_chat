@@ -14,6 +14,11 @@ class NavigateBar1 extends StatelessWidget {
     required this.servicescreen,
     required this.profilescreen,
     required this.notifscreen,
+    required this.sizehome,
+    required this.sizechat,
+    required this.sizeservice,
+    required this.sizeprofile,
+    required this.sizenotif,
   });
 
   final Color homescreen;
@@ -21,6 +26,11 @@ class NavigateBar1 extends StatelessWidget {
   final Color servicescreen;
   final Color profilescreen;
   final Color notifscreen;
+  final double sizehome;
+  final double sizechat;
+  final double sizeservice;
+  final double sizeprofile;
+  final double sizenotif;
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +50,7 @@ class NavigateBar1 extends StatelessWidget {
               icon: Icon(
                 Icons.add_alert_outlined,
                 color: notifscreen,
-                size: 30,
+                size: sizenotif,
               ),
             ),
             const Spacer(),
@@ -55,7 +65,7 @@ class NavigateBar1 extends StatelessWidget {
               icon: Icon(
                 Icons.chat_bubble_outline,
                 color: chatscreen,
-                size: 30,
+                size: sizechat,
               ),
             ),
             const Spacer(),
@@ -69,7 +79,7 @@ class NavigateBar1 extends StatelessWidget {
               icon: Icon(
                 Icons.home_outlined,
                 color: homescreen,
-                size: 32,
+                size: sizehome,
               ),
             ),
             const Spacer(),
@@ -84,7 +94,7 @@ class NavigateBar1 extends StatelessWidget {
               icon: Icon(
                 Icons.miscellaneous_services,
                 color: servicescreen,
-                size: 30,
+                size: sizeservice,
               ),
             ),
             const Spacer(),
@@ -98,7 +108,7 @@ class NavigateBar1 extends StatelessWidget {
               icon: Icon(
                 Icons.perm_identity,
                 color: profilescreen,
-                size: 30,
+                size: sizeprofile,
               ),
             ),
             const Spacer(),
